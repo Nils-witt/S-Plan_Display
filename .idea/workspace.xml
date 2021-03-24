@@ -2,9 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85134a54-e4ae-43d5-895f-29ce273b7898" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/klausuren.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/klausuren.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Global.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/displayPage.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/loadingPage.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/display.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/feature_request.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/display.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/display.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ApiConnector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ApiConnector.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ServiceWorkerConnector.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/display.ts" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Display.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/parser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/parser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.dist.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serviceworker.ts" beforeDir="false" afterPath="$PROJECT_DIR$/serviceworker.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xmlhttp/aushang.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xmlhttp/klausuren.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xmlhttp/vertretungsplan.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +30,14 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -29,17 +54,31 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/js" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/js" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -52,6 +91,14 @@
       <workItem from="1604259389413" duration="112000" />
       <workItem from="1604344479631" duration="9000" />
       <workItem from="1604346983821" duration="626000" />
+      <workItem from="1613320086690" duration="7551000" />
+      <workItem from="1613998345506" duration="120000" />
+      <workItem from="1613998474855" duration="1359000" />
+      <workItem from="1614005450210" duration="49000" />
+      <workItem from="1614235269183" duration="497000" />
+      <workItem from="1616520752038" duration="5582000" />
+      <workItem from="1616606982670" duration="212000" />
+      <workItem from="1616607716497" duration="260000" />
     </task>
     <task id="LOCAL-00001" summary="switched to Typescript and scss">
       <created>1604347403303</created>
@@ -67,63 +114,69 @@
       <option name="project" value="LOCAL" />
       <updated>1604347418997</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="updated to V4">
+      <created>1613998817874</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1613998817874</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updated to only display days with data">
+      <created>1613999246047</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613999246047</updated>
+    </task>
+    <task id="LOCAL-00005" summary="updated TS sources">
+      <created>1614005475693</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1614005475693</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$PROJECT_DIR$/assets/js/display.js" />
-        <option value="$PROJECT_DIR$/assets/js/display.js" />
+        <option value="$PROJECT_DIR$/serviceworker.js" />
+        <option value="$PROJECT_DIR$/assets/js/parser.js" />
+        <option value="$PROJECT_DIR$/serviceworker.js.map" />
+        <option value="$PROJECT_DIR$/assets/js/parser.js.map" />
+        <option value="$PROJECT_DIR$/assets/js/Global.js" />
+        <option value="$PROJECT_DIR$/assets/js/Global.js.map" />
+        <option value="$PROJECT_DIR$/assets/js/loadingPage.js.map" />
+        <option value="$PROJECT_DIR$/assets/js/loadingPage.js" />
+        <option value="$PROJECT_DIR$/assets/js/displayPage.js" />
+        <option value="$PROJECT_DIR$/assets/js/displayPage.js.map" />
       </list>
     </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="switched to Typescript and scss" />
     <MESSAGE value="dev configs" />
-    <option name="LAST_COMMIT_MESSAGE" value="dev configs" />
+    <MESSAGE value="updated to V4" />
+    <MESSAGE value="updated to only display days with data" />
+    <MESSAGE value="updated TS sources" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated TS sources" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="880" y="373" key="#Deployment" timestamp="1604346991615">
-      <screen x="0" y="23" width="2560" height="1369" />
-    </state>
-    <state x="880" y="373" key="#Deployment/2560.116.1920.1057/0.23.2560.1369@0.23.2560.1369" timestamp="1604346991615" />
-    <state x="870" y="301" key="CommitChangelistDialog2" timestamp="1604347418022">
-      <screen x="0" y="23" width="2560" height="1369" />
-    </state>
-    <state x="870" y="301" key="CommitChangelistDialog2/2560.116.1920.1057/0.23.2560.1369@0.23.2560.1369" timestamp="1604347418022" />
-    <state x="945" y="493" key="EditFileWatcherDialog" timestamp="1604347185783">
-      <screen x="0" y="23" width="2560" height="1369" />
-    </state>
-    <state x="945" y="493" key="EditFileWatcherDialog/2560.116.1920.1057/0.23.2560.1369@0.23.2560.1369" timestamp="1604347185783" />
-    <state width="1259" height="393" key="GridCell.Tab.0.bottom" timestamp="1604347500391">
-      <screen x="0" y="23" width="2560" height="1369" />
-    </state>
-    <state width="1259" height="393" key="GridCell.Tab.0.bottom/2560.116.1920.1057/0.23.2560.1369@0.23.2560.1369" timestamp="1604347500391" />
-    <state width="1259" height="393" key="GridCell.Tab.0.center" timestamp="1604347500391">
-      <screen x="0" y="23" width="2560" height="1369" />
-    </state>
-    <state width="1259" height="393" key="GridCell.Tab.0.center/2560.116.1920.1057/0.23.2560.1369@0.23.2560.1369" timestamp="1604347500391" />
-    <state width="1259" height="393" key="GridCell.Tab.0.left" timestamp="1604347500390">
-      <screen x="0" y="23" width="2560" height="1369" />
-    </state>
-    <state width="1259" height="393" key="GridCell.Tab.0.left/2560.116.1920.1057/0.23.2560.1369@0.23.2560.1369" timestamp="1604347500390" />
-    <state width="1259" height="393" key="GridCell.Tab.0.right" timestamp="1604347500391">
-      <screen x="0" y="23" width="2560" height="1369" />
-    </state>
-    <state width="1259" height="393" key="GridCell.Tab.0.right/2560.116.1920.1057/0.23.2560.1369@0.23.2560.1369" timestamp="1604347500391" />
-    <state x="789" y="346" key="SettingsEditor" timestamp="1604347130399">
-      <screen x="0" y="23" width="2560" height="1369" />
-    </state>
-    <state x="789" y="346" key="SettingsEditor/2560.116.1920.1057/0.23.2560.1369@0.23.2560.1369" timestamp="1604347130399" />
-    <state x="1093" y="628" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604346996102">
-      <screen x="0" y="23" width="2560" height="1369" />
-    </state>
-    <state x="1093" y="628" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.116.1920.1057/0.23.2560.1369@0.23.2560.1369" timestamp="1604346996102" />
-    <state x="1187" y="445" key="ftp.server.browser" timestamp="1604346990998">
-      <screen x="0" y="23" width="2560" height="1369" />
-    </state>
-    <state x="1187" y="445" key="ftp.server.browser/2560.116.1920.1057/0.23.2560.1369@0.23.2560.1369" timestamp="1604346990998" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

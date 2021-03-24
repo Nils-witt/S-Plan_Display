@@ -35,7 +35,6 @@ span2 {
   font-family: Arial, sans-serif;
   font-size: 17.0pt;
   font-weight: 700;
-  display: none;
 }
 
 #rechts {
@@ -46,7 +45,6 @@ span2 {
   overflow-x: hidden;
   overflow-y: hidden;
   font-family: Helvetica, Arial, Tahoma, sans-serif;
-  display: none;
 }
 
 #offlineIndicatior {
@@ -55,14 +53,4 @@ span2 {
   background-color: red;
   visibility: hidden;
   font-size: 20pt
-}
-
-#keyInput {
-  width: 200px;
-  visibility: hidden;
-}
-
-#saveKey {
-  width: 200px;
-  visibility: hidden;
 }
