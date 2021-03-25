@@ -2,26 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85134a54-e4ae-43d5-895f-29ce273b7898" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/js/Global.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/displayPage.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/loadingPage.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/display.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/feature_request.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cleanRelease.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/display.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/display.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ApiConnector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ApiConnector.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ServiceWorkerConnector.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/display.ts" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Display.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/parser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/parser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.dist.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serviceworker.ts" beforeDir="false" afterPath="$PROJECT_DIR$/serviceworker.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xmlhttp/aushang.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xmlhttp/klausuren.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xmlhttp/vertretungsplan.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/aushang.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/aushang.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/display.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/display.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/klausuren.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/klausuren.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/vertretungsplan.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/vertretungsplan.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ApiConnector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/ApiConnector.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Display.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/Display.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Global.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/Global.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/displayPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/displayPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/loadingPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/loadingPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/parser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/parser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/display.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/display.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serviceworker.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceworker.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +77,35 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/js" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.Dockerfile" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -98,7 +125,11 @@
       <workItem from="1614235269183" duration="497000" />
       <workItem from="1616520752038" duration="5582000" />
       <workItem from="1616606982670" duration="212000" />
-      <workItem from="1616607716497" duration="260000" />
+      <workItem from="1616607716497" duration="925000" />
+      <workItem from="1616620016186" duration="218000" />
+      <workItem from="1616656375117" duration="778000" />
+      <workItem from="1616700036344" duration="736000" />
+      <workItem from="1616701485329" duration="681000" />
     </task>
     <task id="LOCAL-00001" summary="switched to Typescript and scss">
       <created>1604347403303</created>
@@ -135,16 +166,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614005475693</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="main Update">
+      <created>1616608097521</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1616608097521</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$PROJECT_DIR$/serviceworker.js" />
         <option value="$PROJECT_DIR$/assets/js/parser.js" />
-        <option value="$PROJECT_DIR$/serviceworker.js.map" />
         <option value="$PROJECT_DIR$/assets/js/parser.js.map" />
         <option value="$PROJECT_DIR$/assets/js/Global.js" />
         <option value="$PROJECT_DIR$/assets/js/Global.js.map" />
@@ -173,7 +209,8 @@
     <MESSAGE value="updated to V4" />
     <MESSAGE value="updated to only display days with data" />
     <MESSAGE value="updated TS sources" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated TS sources" />
+    <MESSAGE value="main Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="main Update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

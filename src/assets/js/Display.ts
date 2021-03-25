@@ -18,6 +18,7 @@ class Display {
 
     static replacementLessonContainer: HTMLDivElement;
     static examContainer: HTMLDivElement;
+    static announcementContainer: HTMLDivElement;
 
     static async startUp() {
         console.log("Init");
@@ -37,6 +38,7 @@ class Display {
         return new Promise(async (resolve, reject) => {
             this.setReplacementLessons();
             this.setExams();
+            this.setAnnouncements();
         });
     }
 
@@ -148,7 +150,8 @@ class Display {
             row.getElementsByClassName("course").item(0).innerHTML = event.course.grade;
             row.getElementsByClassName("subject").item(0).innerHTML = event.course.subject + "-" + event.course.group;
             row.getElementsByClassName("newSubject").item(0).innerHTML = event.subject;
-            row.getElementsByClassName("newTeacher").item(0).innerHTML = event.teacherId?.toString();
+            let teacher = "---"
+            row.getElementsByClassName("newTeacher").item(0).innerHTML = teacher;
             row.getElementsByClassName("newRoom").item(0).innerHTML = event.room;
             row.getElementsByClassName("info").item(0).innerHTML = event.info;
         }
@@ -191,27 +194,13 @@ class Display {
 
             let timeFrameTd = <HTMLTableRowElement>eventRow.getElementsByClassName("timeframe").item(0);
             let courseTd = <HTMLTableRowElement>eventRow.getElementsByClassName("course").item(0);
-            let teacherTd = <HTMLTableRowElement>eventRow.getElementsByClassName("teacher").item(0);
             let roomTd = <HTMLTableRowElement>eventRow.getElementsByClassName("room").item(0);
 
             timeFrameTd.style.color = color;
             courseTd.style.color = color;
-            teacherTd.style.color = color;
 
             timeFrameTd.innerText = exam["from"].substr(0, 5) + "-" + exam["to"].substr(0, 5);
-            teacherTd.innerHTML = exam.teacher;
             roomTd.innerHTML = exam.roomLink.room;
-
-            for (const supervisorsKey in exam["supervisors"]) {
-                try {
-                    let column = <HTMLTableRowElement>eventRow.getElementsByClassName("r" + supervisorsKey).item(0);
-                    column.innerText = exam["supervisors"][supervisorsKey];
-
-                } catch (e) {
-                    console.log(e);
-                }
-            }
-
 
             courseTd.innerText = exam.course.grade + ' / ' + exam.course.subject+ '-' + exam.course.group;
 
@@ -220,7 +209,21 @@ class Display {
     }
 
     static setAnnouncements() {
+        console.log(this.data.announcements)
+        let data = this.data.announcements;
+        let container = document.createElement('div');
 
+        for (let i = 0; i < data.length; i++) {
+            let dataset = data[i];
+
+            let dataRow = <HTMLTableRowElement>document.getElementById('aushangTableRowTemplate').cloneNode(true);
+            container.append(dataRow);
+            let column = <HTMLTableCellElement>dataRow.getElementsByTagName('td').item(0);
+            column.innerText = dataset["content"];
+            column.style.backgroundColor = dataset["color"];
+
+        }
+        this.announcementContainer.innerHTML = container.innerHTML;
     }
 }
 
@@ -281,93 +284,3 @@ if ('serviceWorker' in navigator) {
 } else {
     console.log("No sw avilible")
 }
-/*
-
-async function loadDataAushang() {
-    return new Promise<void>(async (resolve, reject) => {
-        let res;
-        try {
-            res = await ApiConnector.loadDataAushang();
-            document.getElementById("aushangTableBody").innerHTML = AushangParse(res).innerHTML;
-            document.getElementById("offlineIndicatior").style.visibility = "hidden";
-        } catch (e) {
-            console.log(e);
-            document.getElementById("offlineIndicatior").style.visibility = "visible";
-        }
-
-        resolve();
-    });
-}
-
-async function loadDataKlausuren() {
-    return new Promise<void>(async (resolve, reject) => {
-        let res;
-        try {
-            console.log("KL load")
-            res = await ApiConnector.loadDataKlausuren();
-            document.getElementById('klausurenTableBody').innerHTML = klausurenParse(res).innerHTML;
-            document.getElementById("offlineIndicatior").style.visibility = "hidden";
-        } catch (e) {
-            console.log(e);
-            document.getElementById("offlineIndicatior").style.visibility = "visible";
-        }
-
-        if (res.status === 200) {
-            document.getElementById("offlineIndicatior").style.visibility = "hidden";
-
-        }
-        resolve();
-    });
-
-}
-
-function setKey() {
-    return new Promise<void>(async (resolve, reject) => {
-        document.getElementById("keyInput").style.visibility = "hidden";
-        document.getElementById("saveKey").style.visibility = "hidden";
-        let keyInput = <HTMLInputElement>document.getElementById("keyInput");
-        let key = keyInput.value;
-        window.localStorage.setItem("key", key);
-        window.localStorage.setItem("token", key);
-
-        await loadVplan();
-        await loadDataAushang();
-        await loadDataKlausuren();
-
-        intervalId = setInterval(async () => {
-            await loadDataAushang();
-            await loadDataKlausuren();
-            await loadVplan();
-        }, refresh_time);
-        window.location.reload();
-        resolve();
-    });
-}
-
-
-//Initial start for all cycle functions
-function start() {
-    return new Promise<void>(async (resolve, reject) => {
-
-        //first DataLoad
-        await loadVplan();
-        await loadDataAushang();
-        await loadDataKlausuren();
-
-        //start scrolling of divs
-        window.setTimeout("scrolldiv('links')", wait_start);
-        window.setTimeout("scrolldiv('rechts')", wait_start);
-
-        //Set interval to pull data
-        intervalId = setInterval(async () => {
-            await loadDataAushang();
-            await loadDataKlausuren();
-            await loadVplan();
-        }, refresh_time);
-
-
-        resolve();
-    });
-}
-*/
-
